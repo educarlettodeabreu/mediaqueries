@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meu site</title>
+    <link rel="stylesheet" href="style.css" media="">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body id="corpo" onresize="tamanhodatela()">
+    <header>
+        <h1>Meu Site</h1>
+        <i id="burguer" class="material-icons" onclick="abrirmenu()">menu</i>
+        <menu id="itens">
+            <ul>
+                <li class="opcoes"><a href="#">opcao 1</a></li>
+                <li class="opcoes"><a href="#">opcao 2</a></li>
+                <li class="opcoes"><a href="#">opcao 3</a></li>
+                <li class="opcoes"><a href="#">opcao 4</a></li>
+                <li class="opcoes"><a href="#">opcao 5</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    <main>
+        <article>
+            <h2>testando media queries</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod fuga repellendus temporibus, quasi totam molestiae aliquid? Mollitia, quae nesciunt neque quos temporibus porro vitae ut perspiciatis autem rem tempore possimus!
+            Deserunt id expedita asperiores optio laboriosam quia hic voluptates beatae minima atque. Magni modi alias aliquam non accusamus rem qui fuga facilis animi, minus dolor culpa laborum odit aliquid optio!
+            Dolore assumenda at repellat, cupiditate laudantium qui debitis quos quis obcaecati nulla vitae ipsum molestias omnis ea aut corporis, unde sed magni. Ducimus laboriosam unde reiciendis facere at recusandae voluptates.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et libero sequi atque placeat saepe, voluptate ullam excepturi vitae tempore ducimus accusantium aliquid minima blanditiis! Reprehenderit cumque deserunt deleniti alias magni.
+            Quidem voluptates rerum velit quibusdam facilis saepe blanditiis officiis asperiores aliquid eligendi molestiae minima numquam alias, adipisci minus suscipit modi voluptatem, quia odio iure provident soluta? Consequuntur sunt eos dicta!
+            Ducimus, libero illum tenetur laboriosam doloremque vitae quis, reprehenderit eum hic repellendus, minus consequuntur autem. Animi, recusandae. Corrupti incidunt vero, quas a minima, natus facilis veniam deleniti tempora ut voluptatibus.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis nostrum voluptas esse rerum repudiandae ea quibusdam doloribus, vel molestiae numquam quidem architecto inventore ab quaerat, cum laboriosam fugit tempora enim?
+            Impedit molestias totam assumenda laudantium nostrum perferendis doloremque in ipsam reiciendis, mollitia voluptas dolores quaerat sint hic vitae vero? Optio nisi adipisci explicabo repellendus deserunt doloremque tempora velit amet voluptates!</p>
+        </article>
+    </main>
+    
+</body>
+<script>
+
+    function tamanhodatela() {
+
+        const corpo = document.getElementById('corpo')
+        const menu = document.getElementById("itens");
+        const burguer = document.getElementById('burguer')
+        let opcoes = document.getElementsByClassName('opcoes')
+
+        if (window.innerWidth >= 768) {
+
+           burguer.style.display = "none"
+
+           menu.style.display = "block"
+           
+           opcoes.style.display = 'inline-block'
+           
+
+
+        }
+
+        else {
+            burguer.style.display = "block"
+
+            menu.style.display = "none"
+
+           
+        }
+    }
+
+    function abrirmenu() {
+     
+        const menu = document.getElementById("itens");
+
+        if (menu.style.display == "block") 
+        {menu.style.display = "none"}
+
+        else {
+            menu.style.display = "block";
+        }
+        
+
+       
+        
+        
+       
+   }
+
+</script>
+</html>
